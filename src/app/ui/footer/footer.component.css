@@ -1,3 +1,51 @@
 .fa-heart {
   color: hotpink;
 }
+
+.footer-container {
+    color: rgba(0,0,0,.87);
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.footer{
+    background: #343a40!important;
+    color: #fff;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.footer-list {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 8px;
+}
+
+.footer-logo{
+  flex: 1;
+}
+
+.footer-version{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-copyright{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.footer-main{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #fff;
+}
