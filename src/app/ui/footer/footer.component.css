@@ -39,10 +39,11 @@
     flex: 1;
     justify-content: flex-end;
     flex-direction: column;
+    min-width: 100px;
 }
 
 .footer-main{
-  position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
