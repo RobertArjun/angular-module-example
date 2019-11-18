@@ -1,0 +1,19 @@
+<h3> Add Table </h3>
+
+<div>
+<label> Enter No of Row : </label>
+   <input [(ngModel)] = "data.row" placeholder="no of row" /> 
+   <label> Enter No of Col : </label>
+   <input [(ngModel)] = "data.col" placeholder="no of column" /> 
+
+   <button (click)="createTable()">Create Table</button>
+</div>
+
+<div *ngIf="isVisible"> 
+  <label> Dynmaic Table </label>
+  <table>
+    <tr *ngFor="let row of arrayGenerator(+this.data.row)"> 
+      <td *ngFor="let col of arrayGenerator(+this.data.col), let i = index"> {{i}} </td>
+    </tr>
+  </table>
+</div>
