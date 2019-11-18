@@ -2,18 +2,32 @@
 
 <div>
 <label> Enter No of Row : </label>
-   <input [(ngModel)] = "data.row" placeholder="no of row" /> 
+   <input [(ngModel)] = "data.row" class="form-control" placeholder="no of row" /> 
    <label> Enter No of Col : </label>
-   <input [(ngModel)] = "data.col" placeholder="no of column" /> 
+   <input class="form-control" [(ngModel)] = "data.col" placeholder="no of column" /> 
 
    <button (click)="createTable()">Create Table</button>
 </div>
 
-<div *ngIf="isVisible"> 
+<div *ngIf="isVisible" class="table-responsive"> 
   <label> Dynmaic Table </label>
-  <table>
-    <tr *ngFor="let row of arrayGenerator(+this.data.row)"> 
-      <td *ngFor="let col of arrayGenerator(+this.data.col), let i = index"> {{i}} </td>
+  <table class="table table-hover">
+    <thead class="thead-dark"> 
+     <tr scope="row" *ngFor="let row of arrayGenerator(1)"> 
+      <th scope="col" *ngFor="let col of arrayGenerator(+this.data.col), let i = index"> 
+      <input [value]="i" class="form-control"/></th>
+      <th scope="col"><label>Action</label></th>
     </tr>
+    </thead>
+    <tbody>
+    <tr scope="row" *ngFor="let row of arrayGenerator(+this.data.row)"> 
+      <td *ngFor="let col of arrayGenerator(+this.data.col), let i = index">  <input class="form-control" [value]="i"/> </td>
+      <td>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-danger">d</button><button type="button" class="btn btn-primary">s</button>
+        </div></div></td>
+    </tr>
+    </tbody>
   </table>
 </div>

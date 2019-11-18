@@ -32,6 +32,9 @@ export class TableComponent implements OnInit {
     }
 }
 
+onChange(){
+  
+}
 
 arrayGenerator(n: number): number[] {
     return Array.from(Array(n).keys());
